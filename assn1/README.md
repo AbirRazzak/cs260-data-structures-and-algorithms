@@ -1,7 +1,9 @@
 # Assignment 1
 
 (i) Implement the following basic data types. Follow specifications presented in the textbook in full detail.
+    
     1. (40 points) Lists: two implementations, array and pointer (pages 41-46), operations: FIRST, END, RETRIEVE, LOCATE, NEXT, PREVIOUS, INSERT, DELETE, MAKENULL,
+    
     2. (20 points) Stacks: two implementations, array and pointer (pages 53-56), operations: TOP, POP, PUSH, EMPTY, MAKENULL
 
 (ii) Develop the code for the following timing experiments. Report your results in the form of tables. The first column should indicate the size of the data structure. The remaining columns should report the measured times for the procedures that you apply. Derive conclusions out of your experiments and write them down.
