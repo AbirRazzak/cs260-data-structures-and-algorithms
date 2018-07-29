@@ -30,14 +30,36 @@ int FIRST(ArrayList L)
 	return -1;
 }
 
-void END()
+void END(ArrayList L)
 {
+	int current = L.size - 1;
 
+	while(current <= 0)
+	{
+		if(L.data[current])
+		{
+			// Return the position of the last assigned value in data[]
+			return current;
+		}
+		current = current - 1;
+	}
+
+	// If no values are assigned in data, return -1
+	return -1;
 }
 
-void RETRIEVE()
+void RETRIEVE(int n, ArrayList L)
 {
-
+	if(L.data[n])
+	{
+		// Return the value of the data at position n
+		return L.data[n];
+	}
+	else
+	{
+		// Return -1 if there is no data at position n
+		return -1;
+	}
 }
 
 void LOCATE()
