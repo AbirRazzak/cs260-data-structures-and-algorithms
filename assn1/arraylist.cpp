@@ -1,6 +1,5 @@
 #include <iostream>
 #include <stdio.h>
-#include <array>
 
 #include "arraylist.h"
 

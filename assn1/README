@@ -2,3 +2,16 @@ README by Abir Razzak
 
 ArrayList
 * So I tried making int size and int data[] private attributes, but because of how the book passes ArrayList as parameters to the functions, I had to make them public so the functions can access the data. Alternatively I could have made the functions as methods to ArrayList and therefore it could access the private attributes, but I wanted the functions to emulate as close to how the book uses them as possible. I realize this is bad practice to make the data public, however I could not find an alternate work around at the time.
+
+
+ArrayStack
+POP:
+   * According to the book POP is implemented like this:
+   * "POP(S). Delete the top element of the stack, that is, DELETE(FIRST(S), S). Sometimes it is convenient to implement POP as a function that returns the element it has just popped, although we shall not do so here."
+   * Therefore, in my case, POP will not be returning an element.
+
+   * If there are no values in the Stack, then POP does not do anything.
+
+EMPTY:
+   * We only need to check the first index of data (data[0]) because data[0] will always be populated if the stack has values in it. If there is no data[0] then that means the Stack is empty.
+    
