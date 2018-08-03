@@ -1,0 +1,4 @@
+README by Abir Razzak
+
+ArrayList
+* So I tried making int size and int data[] private attributes, but because of how the book passes ArrayList as parameters to the functions, I had to make them public so the functions can access the data. Alternatively I could have made the functions as methods to ArrayList and therefore it could access the private attributes, but I wanted the functions to emulate as close to how the book uses them as possible. I realize this is bad practice to make the data public, however I could not find an alternate work around at the time.
