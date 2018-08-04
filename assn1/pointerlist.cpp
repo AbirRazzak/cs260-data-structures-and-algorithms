@@ -27,7 +27,32 @@ void INSERT(int x, int p, PointerList L)
       n->NEXT == NULL;
       return;
    }
+   else
+   {
+      int counter = 0;
+      int current = L->head;
 
+      // Trace through List and determine the node in the position
+      while(current->next != NULL)
+      {
+         if(counter == p)
+         {
+            break;
+         }
+         else
+         {
+            current = current->next;
+            counter++;
+         }
+      }
+
+      // if given p is greater than size
+      if(p > counter)
+      {
+         counter = p; //then just put it in the end;
+      }
+
+   }
    
 }
 
