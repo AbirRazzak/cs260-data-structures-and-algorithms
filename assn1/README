@@ -1,5 +1,9 @@
 README by Abir Razzak
 
+> One thing I really stuggled with a lot in this project is the inability to use NULL in C++
+> Having to code around not using Nulls were very difficult and took the most work time-wise
+> Eventually decided to do the pointer implementations in Python, which is why half is C++ and the other half is Python (couldn't take not being able to use NULL, ended up switching to Python so I could use "None" as a replacement)
+
 ArrayList
 * So I tried making int size and int data[] private attributes, but because of how the book passes ArrayList as parameters to the functions, I had to make them public so the functions can access the data. Alternatively I could have made the functions as methods to ArrayList and therefore it could access the private attributes, but I wanted the functions to emulate as close to how the book uses them as possible. I realize this is bad practice to make the data public, however I could not find an alternate work around at the time.
 
@@ -14,4 +18,8 @@ POP:
 
 EMPTY:
    * We only need to check the first index of data (data[0]) because data[0] will always be populated if the stack has values in it. If there is no data[0] then that means the Stack is empty.
-    
+
+
+PointerList
+DELETE:
+  * I realize this isn't working. There is something wrong with how my INSERT assigns .next to new ListNodes, which is why DELETE can't properly delete nodes from time to time.    
