@@ -30,5 +30,4 @@ for x in range(2000):
     S.POP()
 end3 = time.time()
 print("Process took {0} seconds to run.\n\n".format(end3 - start3))
-S.display()
-
+#S.display()
