@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env/python3
 
 
 class StackNode:
@@ -50,5 +50,5 @@ class PointerStack:
     def display(self):
         current = self.head
         while current is not None:
-            print("{0}".format(current.value), end=" ")
+            print("{0} ".format(current.value))
             current = current.next

@@ -22,7 +22,7 @@ print("\nNEXT::Expected output: '1' ")
 print("{0}".format(l))
 
 l = L.END()
-print("\nEND::Expected output: '2' ")
+print("\nEND::Expected output: '3' ")
 print("{0}".format(l))
 
 L.INSERT(l, 6)
@@ -47,7 +47,7 @@ L.INSERT(4, 8)
 L.MAKENULL()
 print("\nMAKENULL::Expected output: 'None' ")
 L.display()
-print()
+print("")
 
 # Testing Stacks
 print("\nSTARTING TESTS FOR STACK...\n")
@@ -58,7 +58,7 @@ S.PUSH(7)
 S.PUSH(8)
 print("PUSH::Expected output: '8 7 4' ")
 S.display()
-print()
+print("")
 
 top = S.TOP()
 print("\nTOP::Expected output: '8' ")
@@ -67,7 +67,7 @@ print("{0}".format(top))
 S.POP()
 print("\nPOP::Expected output: '7 4' ")
 S.display()
-print()
+print("")
 
 print("\nEMPTY::Expected output: 'FALSE' ")
 if S.EMPTY() is False:
