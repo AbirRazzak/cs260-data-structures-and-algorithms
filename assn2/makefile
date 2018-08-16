@@ -1,8 +1,8 @@
 .PHONY: clean
 
-time:
-	@chmod 755 .
-	@pyhton timing.py
+1:
+	@chmod 755 ./1/.
+	@pyhton 1.py
 
 pointerlist:
 	@chmod 755 .
