@@ -1,4 +1,5 @@
-#!usr/bin/python3
+#!/usr/bin/python3
+
 import sys
 
 def evaluate_prefix(prefix):
@@ -39,6 +40,6 @@ def main():
     if len(sys.argv) == 2:
         print(evaluate_prefix(sys.argv[1]))
     else:
-        print("Parameter Error: Please pass the prefix expression as a parameter")
+        print("Parameter Error: Please pass a prefix expression as a parameter")
 
 if __name__ == '__main__': main()
