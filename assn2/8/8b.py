@@ -38,7 +38,10 @@ def evaluate_postfix(postfix):
     return stack.pop() # Pop the last remaining number, which is the result.
 
 def main():
-    print(evaluate_postfix(sys.argv[1]))
+    if len(sys.argv) == 2:
+        print(evaluate_postfix(sys.argv[1]))
+    else:
+        print("Parameter Error: Please give a postfix expression as a parameter.")
 
 if __name__ == '__main__': main()
 
