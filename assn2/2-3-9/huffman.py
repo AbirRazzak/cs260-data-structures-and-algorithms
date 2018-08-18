@@ -61,12 +61,24 @@ def main():
     }
     tree = huffman(data)
     i = tree.root()
-    print(i.value)
+    j = 0
     while i is not None:
         if len(i.children) != 0:
-            for child in i.children:
-                print(child.value)
+            for k in range(0, 2):
+                code = ""
+                result = i.children[k].value
+                if isinstance(i.children[k].value, str):
+                    for z in range(0, j):
+                        code += "1"
+                    result = result + " - "
+                    result = result + code
+                    if k == 0:
+                        result = result + "0"
+                    else:
+                        result = result + "1"
+                    print(result)
             i = i.children[1]
+            j = j + 1
 
 
 if __name__ == '__main__':
