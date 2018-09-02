@@ -28,5 +28,6 @@ floyd:
 
 clean:
 	@\rm -f ./*.pyc
-	@rm -f ./*.out
+	@\rm -f ./*.out
+	@\rm -f -r ./__pycache__
 
