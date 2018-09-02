@@ -1,0 +1,17 @@
+README
+
+1. The data for the experiments to find the numerical constant is indcluded in a pdf called 'Problem 1 Open Hash.pdf' as well as the analysis of the information to find the constant. 
+
+2. To run problem 2: Dictionary - Closed Hash, use the target closedhash through the command
+
+	make closedhash
+
+There is a PDF titled Problem 2 Closed Hash with table and test data for problem 2.
+
+5. The adjacency matrixes are made using 2D arrays.
+-1 represents there there is no connection between 2 nodes.
+The Dijsktra function requires the matrix, the source vertex, and the number of vertices.
+
+7. To run problem 7: Floyd's algorithm, use the target floyd through the command 
+	
+	make floyd
