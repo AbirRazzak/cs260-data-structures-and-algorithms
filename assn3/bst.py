@@ -1,112 +1,135 @@
 #!/usr/bin/python3
 
 
-class BSTNode:
+from bst_adt import *
 
-    def __init__(self, v=None):
+
+class Dictionary:
+
+    def __init__(self):
         """
-        defines a BST Node with an optional parameter for its value
-        sets 2 attributes, left_child and right_child as None
-        :type v: int
+        defines a dictionary with no parameters
+        has an attribute data that points to a BST
         """
-        self.element = v
-        self.left_child = None
-        self.right_child = None
+        self.data = BinarySearchTree()
 
-    def append(self, x):
+    def makenull(self):
         """
-        replaces the BSTNode with a new BSTNode
-        :type x: BSTNode
+        makes the dictionary empty
         """
-        self = x
+        self.data.root = None
 
-
-class BinarySearchTree:
-
-    def __init__(self, r=None):
+    def insert(self, x):
         """
-        defines a BST with an optional parameter to specify the root
-        :type r: BSTNode
+        inserts x into the dictionary
+        :type x: int
         """
-        self.root = r
-
-
-def bst_member(x, a):
-    """
-    returns if x is a member of the BST
-    :type x: int
-    :type a: BSTNode
-    """
-    if a is None:
-        return False
-
-    if a.element == x:
-        return True
-
-    if x < a.element:
-        return bst_member(x, a.left_child)
-
-    if x > a.element:
-        return bst_member(x, a.right_child)
-
-
-def bst_insert(x, a):
-    """
-    inserts an int into the BST
-    :type x: int
-    :type a: BSTNode
-    """
-    if a is None:
-        a.append(BSTNode(x))
-
-    elif x < a.element:
-        bst_insert(x, a.left_child)
-
-    elif x > a.element:
-        bst_insert(x, a.right_child)
-
-    # if x = A.element, we do nothing
-    # x is already in the set
-
-
-def delete_min(a):
-    """
-    returns and removes the smallest element from set A
-    :type a: BSTNode
-    """
-    if a.left_child is None:
-        # A points to the smallest element
-        m = a.element
-        a.append(a.right_child)
-        return m
-    else:
-        # the node pointed to by A has a left child
-        return delete_min(a.left_child)
-
-
-def bst_delete(x, a):
-    """
-    remove x from set A
-    :type x: int
-    :type a: BSTNode
-    """
-    if a.element is not None:
-        if x < a.element:
-            bst_delete(x, a.left_child)
-
-        elif x > a.element:
-            bst_delete(x, a.right_child)
-
-        # if we reach here, x is at the node pointed to by A
-        elif (a.left_child is None) and (a.right_child is None):
-            a.append(None)
-
-        elif a.left_child is None:
-            a.append(a.right_child)
-
-        elif a.right_child is None:
-            a.append(a.left_child)
-
+        if self.data.root is None:
+            self.data.root = BSTNode(x)
         else:
-            # both children are present
-            a.element = delete_min(a.right_child)
+            bst_insert(x, self.data.root)
+
+    def delete(self, x):
+        """
+        deletes x from the dictionary
+        :type x: int
+        """
+        bst_delete(x, self.data.root)
+
+    def member(self, x):
+        """
+        determines if x is a member of the dictionary
+        :type x: int
+        """
+        return bst_member(x, self.data.root)
+
+    def printd(self):
+        print_dict(self, self.data.root)
+
+
+def print_dict(dictbst, curr):
+    """
+    helper function that prints out a BST Dictionary
+    :param dictbst: Dictionary BST that needs to be printed out
+    :type dictbst: Dictionary
+    :param curr: Current BSTNode being looked at
+    :type curr: BSTNode
+    :return: String of contents
+    """
+    if curr is None or curr.element is None:
+        return
+
+    else:
+        print(curr.element)
+
+        if curr.left_child is not None:
+            print_dict(dictbst, curr.left_child)
+
+        if curr.right_child is not None:
+            print_dict(dictbst, curr.right_child)
+
+
+if __name__ == '__main__':
+    print("-----Dictionary w/ Binary Search Tree Tests-----")
+
+    d = Dictionary()
+
+    print("Testing insert...")
+    print("Inserting 2")
+    print("Expecting: [2]")
+    d.insert(2)
+    d.printd()
+    print("Inserting 5")
+    print("Expecting: [2, 5]")
+    d.insert(5)
+    d.printd()
+    print("Inserting 1")
+    print("Expecting: [2, 1, 5]")
+    d.insert(1)
+    d.printd()
+    print("Inserting 7")
+    print("Expecting: [2, 1, 5, 7]")
+    d.insert(7)
+    d.printd()
+    print("Inserting 1 (Should not change anything)")
+    print("Expecting: [2, 1, 5, 7]")
+    d.insert(1)
+    d.printd()
+
+    print("")
+    print("")
+
+    print("Testing member...")
+    for i in range(9):
+        if d.member(i):
+            print(str(i) + " is in the Dictionary!")
+        else:
+            print(str(i) + " is NOT in the Dictionary.")
+
+    print("")
+    print("")
+
+    print("Testing delete...")
+    print("Deleting 5")
+    print("Expecting: [2, 1, 7]")
+    d.delete(5)
+    d.printd()
+    print("Deleting 3 (Deleting non-existent value)")
+    print("Expecting: [2, 1, 7]")
+    d.delete(3)
+    d.printd()
+    print("Deleting 2 (Deleting root)")
+    print("Expecting: [7, 1]")
+    d.delete(2)
+    d.printd()
+
+    print("")
+    print("")
+
+    print("Testing makenull...")
+    print("Expecting: []")
+    d.makenull()
+    d.printd()
+    print("(If nothing appears above this line, then makenull worked!)")
+
+    print("-----Complete-----")

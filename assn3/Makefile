@@ -1,5 +1,9 @@
 .PHONY: clean
 
+bst:
+	@chmod 755 .
+	@python ./bst.py
+
 openhash:
 	@chmod 755 .
 	@g++ -o ./openhash.out ./openhash.cpp
