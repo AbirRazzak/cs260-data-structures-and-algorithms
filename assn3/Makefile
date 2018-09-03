@@ -26,6 +26,10 @@ floyd:
 	@chmod 755 .
 	@python3 ./floyd.py
 
+trie:
+	@chmod 755 .
+	@python trie.py
+
 clean:
 	@\rm -f ./*.pyc
 	@\rm -f ./*.out

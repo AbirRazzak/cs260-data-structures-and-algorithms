@@ -1,5 +1,9 @@
 README
 
+We were initally assigned to do #6, however we decided to drop #6 and instead do #4 in its place. Cody Lau will be working on #4.
+
+-----
+
 1. The data for the experiments to find the numerical constant is indcluded in a pdf called 'Problem 1 Open Hash.pdf' as well as the analysis of the information to find the constant. 
 
 -----
@@ -27,6 +31,14 @@ There is a PDF titled Problem 2 Closed Hash with table and test data for problem
 
 -----
 
+4. Trie
+Make sure that alice30.txt is in the same directory as trie.py
+    Run "make trie"
+It will return the number of unique words in the file alice30.txt. (it only keeps alphanumeric characters and "-" "'" (hyphen and apostrophe))
+It also sees words with capital letters as different than lowercase letters.
+
+-----
+
 5. The adjacency matrixes are made using 2D arrays.
 -1 represents there there is no connection between 2 nodes.
 The Dijsktra function requires the matrix, the source vertex, and the number of vertices.
@@ -36,3 +48,13 @@ The Dijsktra function requires the matrix, the source vertex, and the number of 
 7. To run problem 7: Floyd's algorithm, use the target floyd through the command 
 	
 	make floyd
+
+-----
+
+8. Depth First Search Algorithm and Numbering
+
+To run the test file for this run:
+    
+    make dfs
+
+Notes: I know there is an enum library in Python, but it seemed overkill for this problem.
