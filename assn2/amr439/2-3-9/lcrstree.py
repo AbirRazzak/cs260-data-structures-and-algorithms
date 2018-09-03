@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 class Node:
 
     def __init__(self, v = None, p = None):
@@ -14,17 +15,18 @@ class Node:
     def set_sibling(self, n):
         self.RightSibling = n
 
+
 class Tree:
 
     def __init__(self, r = None):
-        self.root = r  # type: Node
+        self._root = r  # type: Node
 
     def set_root(self, n):
         """
         This function is mainly used for if the user created an empty tree / makenull and wants to add a root later on
         :param n: Node to make the root
         """
-        self.root = n
+        self._root = n
 
     def parent(self, n):
         return n.parent
@@ -39,10 +41,11 @@ class Tree:
         return n.value
 
     def root(self):
-        return self.root
+        return self._root
 
     def make_null(self):
-        self.root = None
+        self._root = None
+
 
 def create_i(v, t):
     r = Node(v)

@@ -1,0 +1,11 @@
+README by Abir Razzak
+
+Prompt: Implement the following basic data types. Follow specifications presented in the textbook in full detail:
+1. (10 points) Queues: one implementation, pointer (pages 57-60), operations: FRONT, ENQUEUE, DEQUEUE, EMPTY, MAKENULL
+
+How to Run/Test:
+Simply run the 1.py file, it's main method will test all the methods of the queue class.
+
+TO-DO:
+- Create a unittest file (if have time to go back to create proper tests)
+

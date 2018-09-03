@@ -1,0 +1,14 @@
+## Q4 README by Abir Razzak
+
+# Prompt:
+Implement algorithms solving the following problems just in terms of the List ADT operations. You need to use the code you developed for programming assignment 1:
+4.  (10 points) 2.3 b -
+    2.3 Write a program to merge
+    b.  n sorted lists.
+
+# How to Run/Test:
+Simply run 4.py. It alter the the values of list a and b, replace the for loops with whatever values you'd like for a and b. See pointerlist.py to see how INSERT works.
+
+# Notes/Things to Mention:
+The pointerlist.py file is from my assignment 1, and just like Assignment 1, the DELETE function doesn't work. It is not applicable to this problem, but something to consider when reviewing my work. I didn't bother fixing it for this question since, as mentioned before, DELETE isn't applicable to this problem so it doesn't really matter.
+

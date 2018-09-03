@@ -1,35 +1,34 @@
 #!/usr/bin/python3
 
-class Node:
-    self.children = []
-    self.value = None
-    self.parent = None
 
-    def __init__(self, v = None, p = None):
+class Node:
+
+    def __init__(self, v=None, p=None):
+        self.children = []
         self.value = v
         self.parent = p
 
     def add(self, n):
         self.children.append(n)
 
-class Tree:
-    self.root = None
 
-    def __init__(self, n = None):
-        self.root = n
+class Tree:
+
+    def __init__(self, n=None):
+        self._root = n
 
     def set_root(self, n):
         """
         This function is mainly used for if the user created an empty tree / makenull and wants to add a root later on
         :param n: Node to make the root
         """
-        self.root = n
+        self._root = n
 
     def root(self):
-        return self.root
+        return self._root
 
     def make_null(self):
-        self.root = None
+        self._root = None
 
     def leftmost_child(self, n):
         return n.children[0]
@@ -44,6 +43,7 @@ class Tree:
 
     def label(self, n):
         return n.value
+
 
 def create_i(n, t):
     """
